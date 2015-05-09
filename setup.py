@@ -1,33 +1,72 @@
+#!/usr/bin/env python
+# -*- encoding: utf-8 -*-
+from __future__ import absolute_import, print_function
+
+import io
 import os
-import sys
+import re
+from glob import glob
+from os.path import basename
+from os.path import dirname
+from os.path import join
+from os.path import relpath
+from os.path import splitext
 
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
+from setuptools import find_packages
+from setuptools import setup
 
-LONG_DESC = open(os.path.join(os.path.dirname(__file__), "README.md")).read()
+def read(*names, **kwargs):
+    return io.open(
+        join(dirname(__file__), *names),
+        encoding=kwargs.get('encoding', 'utf8')
+    ).read()
+
 
 setup(
-    name = "ghp-import",
-    version = "0.4.1",
-    description = "Copy your docs directly to the gh-pages branch.",
-    long_description = LONG_DESC,
-    author = "Paul Joseph Davis",
-    author_email = "paul.joseph.davis@gmail.com",
-    license = "Tumbolia Public License",
-    url = "http://github.com/davisp/ghp-import",
-    zip_safe = False,
-
-    classifiers = [
-        "Development Status :: 3 - Alpha",
-        "Intended Audience :: Developers",
-        'Natural Language :: English',
-        "Operating System :: OS Independent",
-        "Programming Language :: Python",
-        "Programming Language :: Python :: 2",
-        "Programming Language :: Python :: 3",
+    name='ghp-import2',
+    version='1.0.0',
+    license='TPL',
+    description='A GitHub Pages import tool.',
+    long_description='%s\n%s' % (read('README.rst'), re.sub(':[a-z]+:`~?(.*?)`', r'``\1``', read('CHANGELOG.rst'))),
+    author="Paul Joseph Davis",
+    author_email="paul.joseph.davis@gmail.com",
+    maintainer='Ionel Cristian Mărieș',
+    maintainer_email='contact@ionelmc.ro',
+    url='https://github.com/ionelmc/python-ghp-import',
+    packages=find_packages('src'),
+    package_dir={'': 'src'},
+    py_modules=[splitext(basename(path))[0] for path in glob('src/*.py')],
+    include_package_data=True,
+    zip_safe=False,
+    classifiers=[
+        # complete classifier list: http://pypi.python.org/pypi?%3Aaction=list_classifiers
+        'Development Status :: 5 - Production/Stable',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: BSD License',
+        'Operating System :: OS Independent',
+        'Operating System :: Unix',
+        'Operating System :: POSIX',
+        'Operating System :: Microsoft :: Windows',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 2.6',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: Implementation :: CPython',
+        'Programming Language :: Python :: Implementation :: PyPy',
+        'Topic :: Utilities',
     ],
-
-    scripts = ['ghp-import']
+    keywords=[
+        'github', 'github pages', 'ghp', 'git', 'pages'
+    ],
+    install_requires=[
+    ],
+    extras_require={
+    },
+    entry_points={
+        'console_scripts': [
+            'ghp-import = ghp_import.__main__:main',
+        ]
+    },
 )
