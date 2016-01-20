@@ -34,12 +34,12 @@ if sys.version_info[0] == 3:
                 raise
 else:
     def enc(text):
-        if isinstance(text, unicode):
+        if isinstance(text, unicode):  # NOQA
             return text.encode('utf-8')
         return text
 
     def dec(text):
-        if isinstance(text, unicode):
+        if isinstance(text, unicode):  # NOQA
             return text
         return text.decode('utf-8')
 
@@ -98,7 +98,7 @@ def get_prev_commit(branch):
 def mk_when(timestamp=None):
     if timestamp is None:
         timestamp = int(time.time())
-    currtz = "%+05d" % (-1 * time.timezone / 36) # / 3600 * 100
+    currtz = "%+05d" % (-1 * time.timezone / 36)  # / 3600 * 100
     return "%s %s" % (timestamp, currtz)
 
 
@@ -161,16 +161,16 @@ def run_import(srcdir, branch, message, nojekyll):
 def options():
     return [
         op.make_option('-n', dest='nojekyll', default=False,
-            action="store_true",
-            help='Include a .nojekyll file in the branch.'),
+                       action="store_true",
+                       help='Include a .nojekyll file in the branch.'),
         op.make_option('-m', dest='mesg', default='Update documentation',
-            help='The commit message to use on the target branch.'),
+                       help='The commit message to use on the target branch.'),
         op.make_option('-p', dest='push', default=False, action='store_true',
-            help='Push the branch to origin/{branch} after committing.'),
+                       help='Push the branch to origin/{branch} after committing.'),
         op.make_option('-r', dest='remote', default='origin',
-            help='The name of the remote to push to. [%default]'),
+                       help='The name of the remote to push to. [%default]'),
         op.make_option('-b', dest='branch', default='gh-pages',
-            help='Name of the branch to write to. [%default]'),
+                       help='Name of the branch to write to. [%default]'),
     ]
 
 
