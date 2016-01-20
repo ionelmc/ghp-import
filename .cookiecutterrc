@@ -7,13 +7,13 @@ cookiecutter:
     c_extension_support: 'no'
     codacy: 'yes'
     codeclimate: 'yes'
-    codecov: 'no'
+    codecov: 'yes'
     command_line_interface: plain
     command_line_interface_bin_name: ghp-import
     coveralls: 'yes'
     distribution_name: ghp-import2
     email: contact@ionelmc.ro
-    full_name: Ionel Cristian Marie?
+    full_name: Ionel Cristian Mărieș
     github_username: ionelmc
     landscape: 'yes'
     package_name: ghp_import
