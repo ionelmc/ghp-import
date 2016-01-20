@@ -11,7 +11,7 @@ Overview
       - |docs|
     * - tests
       - | |travis| |appveyor| |requires|
-        | |coveralls|
+        | |coveralls| |codecov|
         | |landscape| |scrutinizer| |codacy| |codeclimate|
     * - package
       - |version| |downloads| |wheel| |supported-versions| |supported-implementations|
@@ -35,6 +35,10 @@ Overview
 .. |coveralls| image:: https://coveralls.io/repos/ionelmc/python-ghp-import/badge.svg?branch=master&service=github
     :alt: Coverage Status
     :target: https://coveralls.io/r/ionelmc/python-ghp-import
+
+.. |codecov| image:: https://codecov.io/github/ionelmc/python-ghp-import/coverage.svg?branch=master
+    :alt: Coverage Status
+    :target: https://codecov.io/github/ionelmc/python-ghp-import
 
 .. |landscape| image:: https://landscape.io/github/ionelmc/python-ghp-import/master/landscape.svg?style=flat
     :target: https://landscape.io/github/ionelmc/python-ghp-import/master
