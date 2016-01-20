@@ -31,3 +31,8 @@ def test_import_src(testdir):
     result = testdir.run('ghp-import', 'output')
     assert result.stdout.lines == []
     assert result.stderr.lines == []
+
+    output.join('abc.txt').write('abc')
+    result = testdir.run('ghp-import', 'output')
+    assert result.stdout.lines == []
+    assert result.stderr.lines == []
