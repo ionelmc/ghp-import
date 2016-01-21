@@ -23,7 +23,7 @@ def read(*names, **kwargs):
 
 setup(
     name='ghp-import2',
-    version='1.0.0',
+    version='1.0.1',
     license='TPL',
     description='A GitHub Pages import tool.',
     long_description='%s\n%s' % (
