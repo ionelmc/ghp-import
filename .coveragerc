@@ -1,9 +1,11 @@
 [paths]
-source = src
+source =
+   src/ghp_import
+   */site-packages/ghp_import
 
 [run]
 branch = True
-source = src
+source = ghp_import
 parallel = true
 
 [report]

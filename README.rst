@@ -1,8 +1,81 @@
-===============================
-ghp-import2
-===============================
+========
+Overview
+========
 
-A dumb GitHub Pages import tool. Packaging is fixed here.
+.. start-badges
+
+.. list-table::
+    :stub-columns: 1
+
+    * - docs
+      - |docs|
+    * - tests
+      - | |travis| |appveyor| |requires|
+        | |coveralls|
+        | |landscape| |scrutinizer| |codacy| |codeclimate|
+    * - package
+      - |version| |downloads| |wheel| |supported-versions| |supported-implementations|
+
+.. |docs| image:: https://readthedocs.org/projects/python-ghp-import/badge/?style=flat
+    :target: https://readthedocs.org/projects/python-ghp-import
+    :alt: Documentation Status
+
+.. |travis| image:: https://travis-ci.org/ionelmc/python-ghp-import.svg?branch=master
+    :alt: Travis-CI Build Status
+    :target: https://travis-ci.org/ionelmc/python-ghp-import
+
+.. |appveyor| image:: https://ci.appveyor.com/api/projects/status/github/ionelmc/python-ghp-import?branch=master&svg=true
+    :alt: AppVeyor Build Status
+    :target: https://ci.appveyor.com/project/ionelmc/python-ghp-import
+
+.. |requires| image:: https://requires.io/github/ionelmc/python-ghp-import/requirements.svg?branch=master
+    :alt: Requirements Status
+    :target: https://requires.io/github/ionelmc/python-ghp-import/requirements/?branch=master
+
+.. |coveralls| image:: https://coveralls.io/repos/ionelmc/python-ghp-import/badge.svg?branch=master&service=github
+    :alt: Coverage Status
+    :target: https://coveralls.io/r/ionelmc/python-ghp-import
+
+.. |landscape| image:: https://landscape.io/github/ionelmc/python-ghp-import/master/landscape.svg?style=flat
+    :target: https://landscape.io/github/ionelmc/python-ghp-import/master
+    :alt: Code Quality Status
+
+.. |codacy| image:: https://img.shields.io/codacy/REPLACE_WITH_PROJECT_ID.svg?style=flat
+    :target: https://www.codacy.com/app/ionelmc/python-ghp-import
+    :alt: Codacy Code Quality Status
+
+.. |codeclimate| image:: https://codeclimate.com/github/ionelmc/python-ghp-import/badges/gpa.svg
+   :target: https://codeclimate.com/github/ionelmc/python-ghp-import
+   :alt: CodeClimate Quality Status
+
+.. |version| image:: https://img.shields.io/pypi/v/ghp-import2.svg?style=flat
+    :alt: PyPI Package latest release
+    :target: https://pypi.python.org/pypi/ghp-import2
+
+.. |downloads| image:: https://img.shields.io/pypi/dm/ghp-import2.svg?style=flat
+    :alt: PyPI Package monthly downloads
+    :target: https://pypi.python.org/pypi/ghp-import2
+
+.. |wheel| image:: https://img.shields.io/pypi/wheel/ghp-import2.svg?style=flat
+    :alt: PyPI Wheel
+    :target: https://pypi.python.org/pypi/ghp-import2
+
+.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/ghp-import2.svg?style=flat
+    :alt: Supported versions
+    :target: https://pypi.python.org/pypi/ghp-import2
+
+.. |supported-implementations| image:: https://img.shields.io/pypi/implementation/ghp-import2.svg?style=flat
+    :alt: Supported implementations
+    :target: https://pypi.python.org/pypi/ghp-import2
+
+.. |scrutinizer| image:: https://img.shields.io/scrutinizer/g/ionelmc/python-ghp-import/master.svg?style=flat
+    :alt: Scrutinizer Status
+    :target: https://scrutinizer-ci.com/g/ionelmc/python-ghp-import/
+
+
+.. end-badges
+
+A GitHub Pages import tool.
 
 Warning
 -------
@@ -11,6 +84,14 @@ This will **DESTROY** your ``gh-pages`` branch. If you love it, you'll want to
 take backups before playing with this. This script assumes that `gh-pages` is
 100% derivative. You should never edit files in your `gh-pages` branch by hand
 if you're using this script because you will lose your work.
+
+
+Installation
+------------
+
+::
+
+    pip install ghp-import2
 
 Usage
 -----
