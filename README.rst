@@ -44,7 +44,7 @@ Overview
     :target: https://landscape.io/github/ionelmc/python-ghp-import/master
     :alt: Code Quality Status
 
-.. |codacy| image:: https://img.shields.io/codacy/REPLACE_WITH_PROJECT_ID.svg?style=flat
+.. |codacy| image:: https://img.shields.io/codacy/79328611bdb34f74a7b08e51ce72110f.svg?style=flat
     :target: https://www.codacy.com/app/ionelmc/python-ghp-import
     :alt: Codacy Code Quality Status
 
